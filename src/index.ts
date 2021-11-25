@@ -76,7 +76,11 @@ function sum1(a: number, b: number): number {
   return a + b;
 }
 
-console.log(sum(), sum1(10, 10));
+function print() {
+  console.log('hello typeScript');
+}
+
+console.log(sum(), sum1(10, 10), print());
 
 // literal
 function sum2(
@@ -93,3 +97,14 @@ function sum2(
 
 console.log(sum2(50, 50, 'as-number'));
 console.log(sum2('hi', 'hello', 'as-string'));
+
+// Unknown
+let value: unknown;
+value = 20;
+value = 'hello';
+let item: string;
+
+if (typeof value === 'string') {
+  item = value;
+  console.log(item);
+}
