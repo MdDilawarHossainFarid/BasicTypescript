@@ -108,3 +108,33 @@ if (typeof value === 'string') {
   item = value;
   console.log(item);
 }
+// Class
+class App {
+  name: string = 'typescript';
+  constructor(name: string) {
+    this.name = name;
+  }
+  getName(): void {
+    console.log(this.name);
+  }
+}
+
+let obj = new App('javascript');
+obj.getName();
+
+// Inheritance
+class Parent {
+  name: string = 'hi';
+  setName(name: string): void {
+    this.name = name;
+  }
+}
+class Child extends Parent {
+  getName(): string {
+    return this.name;
+  }
+}
+
+let obj1 = new Child();
+obj1.setName('Parent last name');
+console.log(obj1.getName());
